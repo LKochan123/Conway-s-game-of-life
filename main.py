@@ -77,6 +77,9 @@ def conways_game():
     run, progress, temp = True, False, False
     pixel_size = ''
 
+    # Image
+    just_smile = Image(650, 350, smile, 0.1)
+
     if clicked_10:
         pixel_size = 10
     if clicked_20:
@@ -90,7 +93,11 @@ def conways_game():
 
     window.fill((40, 40, 40))
     pygame.draw.line(window, (12, 104, 173), (600, 0), (600, 600), 1)  # blue line
-    # pixel_size_10.draw()
+    window.blit(text_1, (610, 200))
+    window.blit(text_2, (648, 220))
+    window.blit(text_3, (605, 260))
+    window.blit(text_4, (650, 280))
+    just_smile.draw()
 
     GofL.update(window, cells)
     pygame.display.flip()
